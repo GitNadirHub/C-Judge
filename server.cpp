@@ -41,7 +41,7 @@ int main() {
         file << code;
         file.close();
         int compileResult = system("g++ temp.cpp -o temp -mconsole 2> compile_errors.txt"); // unde "2>" indica al doilea stream aka stderr
-                                                        //^-mconsole pt ca la un moment dat credea ca era winmain??????
+                                                        //^-mconsole pt ca la un moment dat credea ca era winmain?????? Edit: aia era unrelated
         if (compileResult!=0) // daca e vreo eroare
         {
             res.set_content("Eroare de compilare!\n" + readFile("compile_errors.txt"), "text/plain");
@@ -106,3 +106,4 @@ int main() {
 
     server.listen("localhost", 8080);
 }
+
